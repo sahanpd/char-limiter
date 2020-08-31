@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+.app {
+  padding: 20px;
+  width: 80%;
+  height: 100vh;
+  margin: auto;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-container {
+  width: 100%;
+}
+
+.toolbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 10px 0;
+  flex-wrap: wrap;
+
+  &_left,
+  &_right {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  &_select {
+    margin-top: 10px;
+    user-select: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(109, 109, 109);
+    display: inline;
+    background-color: #e6e6e6;
+    padding: 2px 5px;
+    border-radius: 5px;
+    margin-right: 5px;
+
+    &:hover {
+      background-color: #fab44c;
+
+      color: #fff;
+    }
+  }
+
+  .active-select {
+    background-color: #f5a834;
+    color: #fff;
+  }
+}
+
+.text-input {
+  position: relative;
+  resize: none;
+  padding: 10px;
+  width: 100%;
+  height: 400px;
+  border: 1px solid rgb(113, 179, 255);
+  border-radius: 3px;
+
+  &:focus {
+    outline: none;
+    box-shadow: inset 0 0 5px 1px rgba(112, 179, 255, 0.4);
+  }
+}
+
+.text-input.limit-reached {
+  border: 1px solid #fab44c;
+
+  &:focus {
+    outline: none;
+    box-shadow: inset 0 0 5px 1px #f5a834;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  &_label {
+    user-select: none;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 14px;
+    background-color: rgb(31, 147, 241);
+    color: #fff;
+    border-radius: 5px;
+    padding: 2px 5px;
+    margin-top: 2px;
+  }
+
+  &_label.limit-reached {
+    background-color: #f5a834;
+  }
+
+  &_label.faded {
+    background-color: rgb(97, 184, 255);
+  }
+
+  &_label.faded.limit-reached {
+    background-color: #ffc46c;
+  }
+}
+
+.button {
+  user-select: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline;
+  background-color: #07a6bb;
+  color: #fff;
+  padding: 2px 5px;
+  border-radius: 5px;
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+
+  &:not(:last-of-type) {
+    margin-right: 5px;
+  }
+
+  &:hover {
+    background-color: #08b5cc;
+  }
+}
