@@ -1,14 +1,14 @@
 {
   "name": "char-limiter",
   "version": "1.0.0",
-  "description": "",
+  "description": "Find and limit the character count of text using Char Limiter",
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["character counter", "character limit", "limit text length", "letter count"],
+  "author": "Sahan Dharmawardhana",
+  "license": "MIT",
   "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-react-app": "^3.1.2"
